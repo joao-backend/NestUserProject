@@ -10,12 +10,13 @@ phases:
   pre_build:
     commands:
       - npm install
+      - npm run test
   build:
     commands:
       - npm run build
   post_build:
     commands:
-      - npm run test
+      - echo it's ok
 artifacts:
   files:
     - '**/*'
