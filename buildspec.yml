@@ -5,8 +5,7 @@ phases:
     runtime-versions:
       nodejs: 20
     commands:
-      - npm i -g typescript
-      - npm i -g @nestjs/cli
+      - echo starting now
   pre_build:
     commands:
       - npm install
@@ -19,3 +18,4 @@ phases:
 artifacts:
   files:
     - '**/*'
+  base-directory: 'dist/'
