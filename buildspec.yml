@@ -14,9 +14,6 @@ phases:
   build:
     commands:
       - npm run build
-  post_build:
-    commands:
-      - echo it's ok
 artifacts:
   files:
     - '**/*'
