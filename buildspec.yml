@@ -5,7 +5,8 @@ phases:
     runtime-versions:
       nodejs: 20
     commands:
-      - echo starting now
+      - npm i -g typescript
+      - npm i -g @nestjs/cli
   pre_build:
     commands:
       - npm install
