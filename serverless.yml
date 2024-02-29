@@ -6,11 +6,15 @@ provider:
   deploymentBucket:
     name: my-deployment-bucket-lambda
 
+plugins:
+  - serverless-plugin-typescript
+
 custom:
-  app: serverless
+  typescript:
+    tsconfig: ./tsconfig.json
 
 functions:
   new-user:
-    handler: generateExample.handler
+    handler: serverless/generateExample.handler
     events:
       - schedule: rate(1 hour)
