@@ -8,6 +8,6 @@ provider:
 
 functions:
   new-user:
-    handler: dist/serverless/generateExample.handler
+    handler: serverless/generateExample.handler
     events:
       - schedule: rate(1 hour)
