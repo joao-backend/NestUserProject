@@ -7,14 +7,13 @@ provider:
     name: my-deployment-bucket-lambda
 
 plugins:
-  - serverless-plugin-typescript
+  - serverless-functions-base-path
 
 custom:
-  typescript:
-    tsconfig: ./tsconfig.json
+  functionsBasePath: dist/serverless
 
 functions:
   new-user:
-    handler: serverless/generateExample.handler
+    handler: generateExample.handler
     events:
       - schedule: rate(1 hour)
