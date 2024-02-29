@@ -6,8 +6,11 @@ provider:
   deploymentBucket:
     name: my-deployment-bucket-lambda
 
+custom:
+  app:  dist/serverless/
+
 functions:
   new-user:
-    handler: dist/serverless/generateExample.handler
+    handler: generateExample.handler
     events:
       - schedule: rate(1 hour)
