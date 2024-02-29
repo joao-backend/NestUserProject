@@ -3,6 +3,8 @@ service: api-node-generate
 provider:
   name: aws
   runtime: nodejs20.x
+  deploymentBucket:
+    name: my-deployment-bucket-lambda
 
 functions:
   new-user:
