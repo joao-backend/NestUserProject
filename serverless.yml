@@ -1,0 +1,11 @@
+service: api-node-generate
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+
+functions:
+  new-user:
+    handler: serverless/generateExample.handler
+    events:
+      - schedule: rate(1 hour)
