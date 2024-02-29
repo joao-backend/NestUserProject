@@ -7,7 +7,7 @@ provider:
     name: my-deployment-bucket-lambda
 
 custom:
-  app:  dist/serverless
+  app:  serverless
 
 functions:
   new-user:
